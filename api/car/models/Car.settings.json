@@ -1,0 +1,73 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "car",
+    "description": "car"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "id": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "size": {
+      "required": true,
+      "type": "string"
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "occupancy": {
+      "type": "integer"
+    },
+    "numberOfDoors": {
+      "type": "integer",
+      "required": true
+    },
+    "mpgHighway": {
+      "type": "integer",
+      "required": true
+    },
+    "mpgCity": {
+      "type": "integer",
+      "required": true
+    },
+    "model": {
+      "required": true,
+      "type": "string"
+    },
+    "mileage": {
+      "type": "integer",
+      "required": true
+    },
+    "make": {
+      "required": true,
+      "type": "string"
+    },
+    "images": {
+      "required": true,
+      "type": "string"
+    },
+    "color": {
+      "required": true,
+      "type": "string"
+    },
+    "availability": {
+      "required": true,
+      "type": "string"
+    },
+    "area": {
+      "required": true,
+      "type": "string"
+    }
+  }
+}

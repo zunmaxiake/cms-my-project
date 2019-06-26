@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "recommendation",
+    "description": "recommendation"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "id": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "required": true,
+      "type": "text"
+    }
+  }
+}
