@@ -193,5 +193,16 @@ module.exports = {
       .skip(filters.start)
       .limit(filters.limit)
       .populate(populate);
+  },
+
+  findByRecommend: async (recommend) => {
+    let { makes, maxPrice, minPrice, maxYear, minYear } = recommend;
+    makes = makes.split(",");
+    const conditions = {
+      make: { $in: makes },
+      price: { $gte: minPrice, $lte: maxPrice },
+      year: { $gte: minYear, $lte: maxYear }
+    }
+    return Car.find(conditions, {}, { lean: true });
   }
 };

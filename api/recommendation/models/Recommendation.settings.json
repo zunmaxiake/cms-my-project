@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "recommendation",
   "info": {
     "name": "recommendation",
     "description": "recommendation"
@@ -14,9 +14,25 @@
       "required": true,
       "type": "string"
     },
-    "description": {
+    "makes": {
       "required": true,
-      "type": "text"
+      "type": "string"
+    },
+    "maxPrice": {
+      "type": "integer",
+      "required": true
+    },
+    "minPrice": {
+      "type": "integer",
+      "required": true
+    },
+    "maxYear": {
+      "type": "integer",
+      "required": true
+    },
+    "minYear": {
+      "type": "integer",
+      "required": true
     }
   }
 }

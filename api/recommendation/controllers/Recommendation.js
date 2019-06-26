@@ -36,6 +36,14 @@ module.exports = {
     return strapi.services.recommendation.fetch(ctx.params);
   },
 
+  findRecommendationCars: async (ctx) => {
+    if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+      return ctx.notFound();
+    }
+    const recommend = await strapi.services.recommendation.fetch(ctx.params);
+    return strapi.services.car.findByRecommend(recommend);
+  },
+
   /**
    * Count recommendation records.
    *
@@ -63,7 +71,7 @@ module.exports = {
    */
 
   update: async (ctx, next) => {
-    return strapi.services.recommendation.edit(ctx.params, ctx.request.body) ;
+    return strapi.services.recommendation.edit(ctx.params, ctx.request.body);
   },
 
   /**
